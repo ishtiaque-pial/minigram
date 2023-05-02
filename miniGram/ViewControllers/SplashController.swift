@@ -15,16 +15,40 @@ class SplashController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       // self.splashViewModel = SplashViewModel()
         self.appNameLabel.text = self.splashViewModel.appName()
+        
+       // Timer(timeInterval: 5.0, target: self, selector: #selector(timerFireDetector), userInfo: nil, repeats: false).fire()
+        
+        Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(timerFireDetector), userInfo: nil, repeats: false)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
     
-    @IBAction func onClickButton () {
-        print("Button was clicked.")
+    @objc func timerFireDetector () {
+        print("timeFireDetector func called.")
+        self.goToLoginScreen()
+    }
+    
+    func goToLoginScreen() {
+        print("go to login screen")
+        
+        if let loginNavigationController = self.storyboard?.instantiateViewController(withIdentifier: MinigramApp.loginNavigationController) as? UINavigationController {
+           // self.present(loginNavigationController, animated: true)
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if let sceneDelegate = windowScene.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = loginNavigationController
+                }
+            }
+        }
+        
+        /*
+        if let loginController = self.storyboard?.instantiateViewController(withIdentifier: MinigramApp.loginController) as? LoginController {
+            self.present(loginController, animated: true)
+        }
+         */
     }
 }
