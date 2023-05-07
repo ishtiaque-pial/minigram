@@ -147,6 +147,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Get Started" id="Bdd-L4-s5Z"/>
+                    <connections>
+                        <outlet property="emailField" destination="oq4-vh-dEQ" id="Tiz-JB-s55"/>
+                        <outlet property="passwordField" destination="Qvs-nv-tkb" id="oL0-CU-AKA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gqq-u8-azo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
