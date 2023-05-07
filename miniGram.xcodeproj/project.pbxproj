@@ -13,6 +13,9 @@
 		5B2A9F2329E1D73100A172E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A9F2129E1D73100A172E6 /* Main.storyboard */; };
 		5B2A9F2529E1D73100A172E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A9F2429E1D73100A172E6 /* Assets.xcassets */; };
 		5B2A9F2829E1D73100A172E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2A9F2629E1D73100A172E6 /* LaunchScreen.storyboard */; };
+		5B4173E62A08123800597704 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4173E52A08123800597704 /* HomeController.swift */; };
+		5B4173E82A08124100597704 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4173E72A08124100597704 /* SearchController.swift */; };
+		5B4173EA2A08124B00597704 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4173E92A08124B00597704 /* ProfileController.swift */; };
 		5B5FC4262A01641100229274 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FC4252A01641100229274 /* LoginController.swift */; };
 		5B5FC4282A0170FB00229274 /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FC4272A0170FB00229274 /* ForgotController.swift */; };
 		5BF2830529FD7F41009934C5 /* MinigramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830429FD7F41009934C5 /* MinigramApp.swift */; };
@@ -33,6 +36,9 @@
 		5B2A9F2429E1D73100A172E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B2A9F2729E1D73100A172E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B2A9F2929E1D73100A172E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B4173E52A08123800597704 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		5B4173E72A08124100597704 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		5B4173E92A08124B00597704 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5B5FC4252A01641100229274 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5B5FC4272A0170FB00229274 /* ForgotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotController.swift; sourceTree = "<group>"; };
 		5BF2830429FD7F41009934C5 /* MinigramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigramApp.swift; sourceTree = "<group>"; };
@@ -62,7 +68,6 @@
 				5F7A39EF732D3AF32D82A153 /* Pods-miniGram.debug.xcconfig */,
 				311674EF98EE218028E33903 /* Pods-miniGram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -116,6 +121,9 @@
 				5BF2830829FD8189009934C5 /* SplashController.swift */,
 				5B5FC4252A01641100229274 /* LoginController.swift */,
 				5B5FC4272A0170FB00229274 /* ForgotController.swift */,
+				5B4173E52A08123800597704 /* HomeController.swift */,
+				5B4173E72A08124100597704 /* SearchController.swift */,
+				5B4173E92A08124B00597704 /* ProfileController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -286,10 +294,13 @@
 			files = (
 				5B5FC4282A0170FB00229274 /* ForgotController.swift in Sources */,
 				5B2A9F2029E1D73100A172E6 /* ViewController.swift in Sources */,
+				5B4173E62A08123800597704 /* HomeController.swift in Sources */,
 				5BF2830B29FD8855009934C5 /* SplashService.swift in Sources */,
 				5BF2830729FD8065009934C5 /* SplashModel.swift in Sources */,
+				5B4173EA2A08124B00597704 /* ProfileController.swift in Sources */,
 				5BF2830929FD8189009934C5 /* SplashController.swift in Sources */,
 				5B5FC4262A01641100229274 /* LoginController.swift in Sources */,
+				5B4173E82A08124100597704 /* SearchController.swift in Sources */,
 				5BF2830529FD7F41009934C5 /* MinigramApp.swift in Sources */,
 				5B2A9F1C29E1D73100A172E6 /* AppDelegate.swift in Sources */,
 				5B2A9F1E29E1D73100A172E6 /* SceneDelegate.swift in Sources */,

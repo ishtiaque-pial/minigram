@@ -9,6 +9,8 @@ import UIKit
 
 class LoginController: UIViewController {
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +18,17 @@ class LoginController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onClickLoginButton () {
+        print("login button was clicked")
+        
+        if let homeTabBarController = self.storyboard?.instantiateViewController(withIdentifier: MinigramApp.homeTabBarController) as? UITabBarController {
+            
+            if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+                if let sceneDelegate = windowScene.delegate as? SceneDelegate {
+                    sceneDelegate.window?.rootViewController = homeTabBarController
+                }
+            }
+        }
     }
-    */
 
 }

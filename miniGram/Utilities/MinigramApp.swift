@@ -14,5 +14,9 @@ class MinigramApp {
     static let loginNavigationController = "LoginNavigationController"
     static let loginController = "LoginController"
     static let forgotController = "ForgotController"
+    static let homeController = "HomeController"
+    static let searchController = "SearchController"
+    static let profileController = "ProfileController"
+    static let homeTabBarController = "HomeTabBarController"
 }
 
