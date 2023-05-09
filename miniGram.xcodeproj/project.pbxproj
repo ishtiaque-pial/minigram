@@ -18,6 +18,9 @@
 		5B4173EA2A08124B00597704 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4173E92A08124B00597704 /* ProfileController.swift */; };
 		5B5FC4262A01641100229274 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FC4252A01641100229274 /* LoginController.swift */; };
 		5B5FC4282A0170FB00229274 /* ForgotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B5FC4272A0170FB00229274 /* ForgotController.swift */; };
+		5BB57BF92A0AABEB004B278D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */; };
+		5BB57BFD2A0AAEE2004B278D /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BFC2A0AAEE2004B278D /* UIImageViewExtension.swift */; };
+		5BB57BFF2A0AB5A6004B278D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */; };
 		5BF2830529FD7F41009934C5 /* MinigramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830429FD7F41009934C5 /* MinigramApp.swift */; };
 		5BF2830729FD8065009934C5 /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830629FD8065009934C5 /* SplashModel.swift */; };
 		5BF2830929FD8189009934C5 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830829FD8189009934C5 /* SplashController.swift */; };
@@ -41,6 +44,9 @@
 		5B4173E92A08124B00597704 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		5B5FC4252A01641100229274 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5B5FC4272A0170FB00229274 /* ForgotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotController.swift; sourceTree = "<group>"; };
+		5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5BB57BFC2A0AAEE2004B278D /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		5BF2830429FD7F41009934C5 /* MinigramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigramApp.swift; sourceTree = "<group>"; };
 		5BF2830629FD8065009934C5 /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 		5BF2830829FD8189009934C5 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		5B2A9F1A29E1D73100A172E6 /* miniGram */ = {
 			isa = PBXGroup;
 			children = (
+				5BB57BFA2A0AAEA1004B278D /* Extensions */,
 				5BF2830329FD7F1D009934C5 /* Utilities */,
 				5BF2830229FD7EF4009934C5 /* Storyboards */,
 				5BF2830129FD7E98009934C5 /* ViewModels */,
@@ -103,6 +110,15 @@
 				5B2A9F2929E1D73100A172E6 /* Info.plist */,
 			);
 			path = miniGram;
+			sourceTree = "<group>";
+		};
+		5BB57BFA2A0AAEA1004B278D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5BB57BFC2A0AAEE2004B278D /* UIImageViewExtension.swift */,
+				5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5BF282FD29FD7E56009934C5 /* AppDelegate */ = {
@@ -147,6 +163,7 @@
 		5BF2830129FD7E98009934C5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */,
 				5BF2830C29FD8976009934C5 /* SplashViewModel.swift */,
 			);
 			path = ViewModels;
@@ -297,7 +314,10 @@
 				5B4173E62A08123800597704 /* HomeController.swift in Sources */,
 				5BF2830B29FD8855009934C5 /* SplashService.swift in Sources */,
 				5BF2830729FD8065009934C5 /* SplashModel.swift in Sources */,
+				5BB57BFD2A0AAEE2004B278D /* UIImageViewExtension.swift in Sources */,
+				5BB57BFF2A0AB5A6004B278D /* UIViewExtension.swift in Sources */,
 				5B4173EA2A08124B00597704 /* ProfileController.swift in Sources */,
+				5BB57BF92A0AABEB004B278D /* ProfileViewModel.swift in Sources */,
 				5BF2830929FD8189009934C5 /* SplashController.swift in Sources */,
 				5B5FC4262A01641100229274 /* LoginController.swift in Sources */,
 				5B4173E82A08124100597704 /* SearchController.swift in Sources */,

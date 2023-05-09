@@ -9,9 +9,19 @@ import UIKit
 
 class ProfileController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var followButton: UIButton!
+    
+    var profileViewModel: ProfileViewModel = ProfileViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.profileImageView.image = profileViewModel.profilePhoto
+        self.profileImageView.makeImageViewRounded()
+        
+        self.followButton.addCornerToView(radius: 5.0)
+        
         // Do any additional setup after loading the view.
     }
     
