@@ -21,6 +21,10 @@
 		5BB57BF92A0AABEB004B278D /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */; };
 		5BB57BFD2A0AAEE2004B278D /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BFC2A0AAEE2004B278D /* UIImageViewExtension.swift */; };
 		5BB57BFF2A0AB5A6004B278D /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */; };
+		5BC442A52A1924DF00BC679B /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC442A42A1924DF00BC679B /* FeedCell.xib */; };
+		5BC442A72A19251100BC679B /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC442A62A19251100BC679B /* FeedCell.swift */; };
+		5BC442A92A19285000BC679B /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC442A82A19285000BC679B /* FeedModel.swift */; };
+		5BC442AB2A1928A800BC679B /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC442AA2A1928A800BC679B /* FeedViewModel.swift */; };
 		5BF2830529FD7F41009934C5 /* MinigramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830429FD7F41009934C5 /* MinigramApp.swift */; };
 		5BF2830729FD8065009934C5 /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830629FD8065009934C5 /* SplashModel.swift */; };
 		5BF2830929FD8189009934C5 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BF2830829FD8189009934C5 /* SplashController.swift */; };
@@ -47,6 +51,10 @@
 		5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5BB57BFC2A0AAEE2004B278D /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		5BC442A42A1924DF00BC679B /* FeedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
+		5BC442A62A19251100BC679B /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		5BC442A82A19285000BC679B /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		5BC442AA2A1928A800BC679B /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		5BF2830429FD7F41009934C5 /* MinigramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinigramApp.swift; sourceTree = "<group>"; };
 		5BF2830629FD8065009934C5 /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 		5BF2830829FD8189009934C5 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 		5B2A9F1A29E1D73100A172E6 /* miniGram */ = {
 			isa = PBXGroup;
 			children = (
+				5BC442A32A1924B600BC679B /* CustomCells */,
 				5BB57BFA2A0AAEA1004B278D /* Extensions */,
 				5BF2830329FD7F1D009934C5 /* Utilities */,
 				5BF2830229FD7EF4009934C5 /* Storyboards */,
@@ -119,6 +128,15 @@
 				5BB57BFE2A0AB5A6004B278D /* UIViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5BC442A32A1924B600BC679B /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				5BC442A42A1924DF00BC679B /* FeedCell.xib */,
+				5BC442A62A19251100BC679B /* FeedCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		5BF282FD29FD7E56009934C5 /* AppDelegate */ = {
@@ -148,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				5BF2830629FD8065009934C5 /* SplashModel.swift */,
+				5BC442A82A19285000BC679B /* FeedModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +184,7 @@
 			children = (
 				5BB57BF82A0AABEB004B278D /* ProfileViewModel.swift */,
 				5BF2830C29FD8976009934C5 /* SplashViewModel.swift */,
+				5BC442AA2A1928A800BC679B /* FeedViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -255,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B2A9F2829E1D73100A172E6 /* LaunchScreen.storyboard in Resources */,
+				5BC442A52A1924DF00BC679B /* FeedCell.xib in Resources */,
 				5B2A9F2529E1D73100A172E6 /* Assets.xcassets in Resources */,
 				5B2A9F2329E1D73100A172E6 /* Main.storyboard in Resources */,
 			);
@@ -309,8 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC442AB2A1928A800BC679B /* FeedViewModel.swift in Sources */,
 				5B5FC4282A0170FB00229274 /* ForgotController.swift in Sources */,
+				5BC442A92A19285000BC679B /* FeedModel.swift in Sources */,
 				5B2A9F2029E1D73100A172E6 /* ViewController.swift in Sources */,
+				5BC442A72A19251100BC679B /* FeedCell.swift in Sources */,
 				5B4173E62A08123800597704 /* HomeController.swift in Sources */,
 				5BF2830B29FD8855009934C5 /* SplashService.swift in Sources */,
 				5BF2830729FD8065009934C5 /* SplashModel.swift in Sources */,
