@@ -1,16 +1,20 @@
 PODS:
+  - ActionKit (2.5.3)
   - IQKeyboardManager (6.5.11)
 
 DEPENDENCIES:
+  - ActionKit (~> 2.5.2)
   - IQKeyboardManager
 
 SPEC REPOS:
   trunk:
+    - ActionKit
     - IQKeyboardManager
 
 SPEC CHECKSUMS:
+  ActionKit: c1b6427fd36a0fe2223555679bcc5dea437af5b3
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
 
-PODFILE CHECKSUM: 52d727e000229092d6425b0ecbd63ee8b4cfacc4
+PODFILE CHECKSUM: f59377b319d97917e86e6744195d8af7b18ee2ea
 
 COCOAPODS: 1.12.0

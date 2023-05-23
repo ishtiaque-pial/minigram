@@ -7,5 +7,6 @@ target 'miniGram' do
 
   # Pods for miniGram
   pod 'IQKeyboardManager'
+  pod 'ActionKit', '~> 2.5.2'
 
 end
