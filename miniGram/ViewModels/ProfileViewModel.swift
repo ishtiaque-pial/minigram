@@ -32,12 +32,12 @@ class ProfileViewModel {
         FeedModel(username: "Midjourney", userPhoto: UIImage(named: "user1")!, contentImage: UIImage(named: "content1")!, contentText: "Midjourney can generate amazing image with AI")
     ]
     
-    var numberOfPosts: Int {
-        return self.dataSet.count
+    func numberOfPosts(isMyPost: Bool) -> Int {
+        return isMyPost ? self.dataSet.count : self.dataSetTagged.count
     }
     
-    func postAtRow(itemIndex: Int) -> FeedModel {
-        return self.dataSet[itemIndex]
+    func postAtRow(itemIndex: Int,isMyPost: Bool) -> FeedModel {
+        return isMyPost ? self.dataSet[itemIndex]: self.dataSetTagged[itemIndex]
     }
     
 }

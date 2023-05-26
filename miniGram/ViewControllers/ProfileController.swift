@@ -28,6 +28,7 @@ class ProfileController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.segmentedControl.addControlEvent(.valueChanged) {
+            self.mCollectionView.reloadData()
             print("currently selected segment index = \(self.segmentedControl.selectedSegmentIndex)")
         }
         
@@ -53,13 +54,13 @@ extension ProfileController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return profileViewModel.numberOfPosts
+        return profileViewModel.numberOfPosts(isMyPost: self.segmentedControl.selectedSegmentIndex==0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCell.reuseIdentifier, for: indexPath) as! PostCell
-        let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item)
+        let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item,isMyPost: self.segmentedControl.selectedSegmentIndex==0)
         cell.contentImageView.image = post.contentImage
         
         return cell
@@ -70,7 +71,7 @@ extension ProfileController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item)
+        let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item,isMyPost: self.segmentedControl.selectedSegmentIndex==0)
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: MinigramApp.PostController) as? PostController {
             controller.post = post
             self.navigationController?.pushViewController(controller, animated: true)
