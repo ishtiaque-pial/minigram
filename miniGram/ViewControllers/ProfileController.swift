@@ -74,6 +74,7 @@ extension ProfileController: UICollectionViewDelegate {
         let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item,isMyPost: self.segmentedControl.selectedSegmentIndex==0)
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: MinigramApp.PostController) as? PostController {
             controller.post = post
+            controller.titleValue = (self.segmentedControl.selectedSegmentIndex==0) ? "My Post":"Tagged Post"
             self.navigationController?.pushViewController(controller, animated: true)
         }
     }
