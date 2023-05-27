@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class HomeController: UIViewController {
     
@@ -24,6 +26,7 @@ class HomeController: UIViewController {
         self.homeTableView.estimatedRowHeight = 350.0
         self.homeTableView.rowHeight = UITableView.automaticDimension
         
+        self.getPostsFromAPI()
     }
 
     // what happens when a row is clicked
@@ -62,7 +65,10 @@ extension HomeController: UITableViewDataSource {
         let feedData = self.feedViewModel.feedDataAtRow(row: indexPath.row)
         feedCell.userPhotoImageView.image = feedData.userPhoto
         feedCell.userNameLabel.text = feedData.username
-        feedCell.contentImageView.image = feedData.contentImage
+        // feedCell.contentImageView.image = feedData.contentImage
+        if let url = URL(string: feedData.contentImageUrl) {
+            feedCell.contentImageView.kf.setImage(with: url)
+        }
         feedCell.contentTextLabel.text = feedData.contentText
         
         feedCell.userPhotoImageView.makeImageViewRounded()
@@ -82,4 +88,60 @@ extension HomeController: UITableViewDelegate {
         self.present(alertController, animated: true)
         
     }
+}
+
+extension HomeController {
+    
+    func getPostsFromAPI () {
+        print("getPostsFromAPI")
+      /*  AF.request(MinigramApp.apiBaseUrl + "/api/posts?populate=*").response { response in
+            debugPrint(response)
+        } */
+        let url = MinigramApp.apiBaseUrl + "/api/posts?populate=*"
+        let parameters: [String: Any] = [:]
+        let headers: HTTPHeaders = [
+            "Authorization": MinigramApp.authorizationHeader
+        ]
+        AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: headers, interceptor: nil, requestModifier: nil).responseDecodable(of: PostResponse.self) { response in
+            debugPrint(response)
+            
+            switch (response.result) {
+                    case .success:
+                        print("Validation Successful")
+                        self.parsePostResponse(value: response.value)
+                    case let .failure(error):
+                        print(error)
+            }
+            
+        }
+    }
+    
+    func parsePostResponse (value: PostResponse?) {
+        self.feedViewModel.dataSet = []
+        if let postResponse = value {
+            if let data = postResponse.data {
+                for item in data {
+                    if let content = item.attributes?.content {
+                        print(content)
+                        var authorUsername = ""
+                        if let authorName = item.attributes?.author?.data?.attributes?.username {
+                            authorUsername = authorName
+                        }
+                        var contentUrl = ""
+                        if let url = item.attributes?.imageContent?.data?.attributes?.url {
+                            contentUrl = MinigramApp.apiBaseUrl + url
+                        }
+                        
+                        let postData = FeedModel(username: authorUsername, userPhoto: UIImage(), contentImageUrl: contentUrl, contentText: content)
+                        self.feedViewModel.dataSet.append(postData)
+                    }
+                }
+            }
+        }
+        self.homeTableView.reloadData()
+    }
+    
+    // Assignment Class 11
+    // Refactor this code and take it to View Model class, do all the processing in the view model class
+    // See SwiftyJSON for alternate JSON Parsing
 }
