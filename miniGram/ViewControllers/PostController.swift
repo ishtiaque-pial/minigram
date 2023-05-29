@@ -26,7 +26,7 @@ class PostController: UIViewController {
         
         userPhotoImageView.image = self.post.userPhoto
         userNameLabel.text = self.post.username
-        contentImageView.image = self.post.contentImage
+       // contentImageView.image = self.post.contentImage
         contentTextLabel.text = self.post.contentText
         
         userPhotoImageView.makeImageViewRounded()

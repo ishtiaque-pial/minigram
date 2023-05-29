@@ -11,6 +11,6 @@ import UIKit
 struct FeedModel {
     let username: String
     let userPhoto: UIImage
-    let contentImage: UIImage
+    let contentImageUrl: String
     let contentText: String
 }

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class HomeController: UIViewController {
     
@@ -24,6 +26,10 @@ class HomeController: UIViewController {
         self.homeTableView.estimatedRowHeight = 350.0
         self.homeTableView.rowHeight = UITableView.automaticDimension
         
+        //self.getPostsFromAPI()
+        self.feedViewModel.getPostsFromAPI{
+            self.homeTableView.reloadData()
+        }
     }
 
     // what happens when a row is clicked
@@ -62,7 +68,10 @@ extension HomeController: UITableViewDataSource {
         let feedData = self.feedViewModel.feedDataAtRow(row: indexPath.row)
         feedCell.userPhotoImageView.image = feedData.userPhoto
         feedCell.userNameLabel.text = feedData.username
-        feedCell.contentImageView.image = feedData.contentImage
+        // feedCell.contentImageView.image = feedData.contentImage
+        if let url = URL(string: feedData.contentImageUrl) {
+            feedCell.contentImageView.kf.setImage(with: url)
+        }
         feedCell.contentTextLabel.text = feedData.contentText
         
         feedCell.userPhotoImageView.makeImageViewRounded()

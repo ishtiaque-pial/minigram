@@ -61,7 +61,7 @@ extension ProfileController: UICollectionViewDataSource {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCell.reuseIdentifier, for: indexPath) as! PostCell
         let post = self.profileViewModel.postAtRow(itemIndex: indexPath.item,isMyPost: self.segmentedControl.selectedSegmentIndex==0)
-        cell.contentImageView.image = post.contentImage
+       // cell.contentImageView.image = post.contentImage
         
         return cell
     }
